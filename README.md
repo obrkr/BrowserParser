@@ -1,6 +1,6 @@
 # 🌐 Browser History Parser
 
-A Python tool for extracting and exporting browsing history from **Chrome, Edge, Brave, Opera, Vivaldi, and other Chromium-based browsers**. Parses the browser's SQLite `History` database and exports everything to a formatted `.xlsx` spreadsheet.
+A Python tool for extracting and exporting browsing history from **Chromium-based browsers**. Parses the browser's SQLite `History` database and exports everything to a formatted `.xlsx` spreadsheet.
 
 ---
 
@@ -34,35 +34,7 @@ If `browser_history.xlsx` already exists, the output is saved as `browser_histor
 
 ## 🖥️ Supported Browsers
 
-Any Chromium-based browser is supported. Tested profile paths:
-
-**macOS**
-```
-Chrome:   ~/Library/Application Support/Google/Chrome/Default/
-Edge:     ~/Library/Application Support/Microsoft Edge/Default/
-Brave:    ~/Library/Application Support/BraveSoftware/Brave-Browser/Default/
-Opera:    ~/Library/Application Support/com.operasoftware.Opera/Default/
-Vivaldi:  ~/Library/Application Support/Vivaldi/Default/
-Chromium: ~/Library/Application Support/Chromium/Default/
-```
-
-**Windows**
-```
-Chrome:   %LOCALAPPDATA%\Google\Chrome\User Data\Default\
-Edge:     %LOCALAPPDATA%\Microsoft\Edge\User Data\Default\
-Brave:    %LOCALAPPDATA%\BraveSoftware\Brave-Browser\User Data\Default\
-Opera:    %APPDATA%\Opera Software\Opera Stable\
-Vivaldi:  %LOCALAPPDATA%\Vivaldi\User Data\Default\
-Chromium: %LOCALAPPDATA%\Chromium\User Data\Default\
-```
-
-**Linux**
-```
-Chrome:   ~/.config/google-chrome/Default/
-Edge:     ~/.config/microsoft-edge/Default/
-Brave:    ~/.config/BraveSoftware/Brave-Browser/Default/
-Chromium: ~/.config/chromium/Default/
-```
+Any Chromium-based browser is supported. So far only Chrome has been tested, not sure if any of the other databases use have some oddities in them.
 
 ---
 
@@ -92,7 +64,7 @@ cd BrowserParser
 pip install -r requirements.txt
 ```
 
-2. **Close your browser** (or the script will work from a copy, but closing it ensures the most up-to-date data).
+2. If you want to use on a live system **Close your browser** (or the script will work from a copy, but closing it ensures the most up-to-date data). Else point to where you have captured browser artefacts
 
 3. Run the script:
 
